@@ -4,7 +4,7 @@ import numpy as np
 video = cv2.VideoCapture('video2.mp4')
 fps = video.get(cv2.CAP_PROP_FPS)
 print(f"Frames por segundo: {fps}")
-time = int(100 / fps)
+time = int(500 / fps)
 while True:
     ret, frame = video.read()
     if ret == True:
