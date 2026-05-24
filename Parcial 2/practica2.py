@@ -10,7 +10,7 @@ copy = img.copy()
 copy = cv2.cvtColor(copy, cv2.COLOR_BGR2GRAY)
 copy = cv2.GaussianBlur(copy, (5, 5), 0)
 _, valor = cv2.threshold(copy, 190, 255, cv2.THRESH_BINARY)
-kernel = np.ones((3, 3), np.uint8)
+kernel = np.ones((5, 5), np.uint8)
 figura = cv2.morphologyEx(valor, cv2.MORPH_CLOSE, kernel)
 bordes = cv2.Canny(figura, 3, 3)
 contornos, _ = cv2.findContours(bordes, cv2.RETR_EXTERNAL, cv2.CHAIN_APPROX_SIMPLE)
@@ -23,7 +23,7 @@ lista = []
 for i in range(len(contornos)):
     area = cv2.contourArea(contornos[i])
     # print("Área del contorno {}: {}".format(i, area))
-    if area > 1000:
+    if area > 2000:
         lista.append(area)
         print("Área del contorno {}: {}".format(i, area))
         print(f"los objetos encontrados son: {len(lista)}")

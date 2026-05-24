@@ -39,3 +39,4 @@ cv2.destroyAllWindows()
 if detner:
     voz.say("La cámara se ha detenido.")
     voz.runAndWait()
+    

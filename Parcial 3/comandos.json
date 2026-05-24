@@ -1,0 +1,12 @@
+{
+    "abre": {
+        "calculadora": "calc.exe",
+        "navegador": "C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe",
+        "bloc de notas": "notepad.exe"
+    },
+    "chiste": [
+        "¿Qué le dice un techo a otro techo? Techo de menos.",
+        "¿Por qué los pájaros no usan Facebook? Porque ya tienen Twitter.",
+        "¿Qué le dijo un pez a otro pez? Nada."
+    ]
+}

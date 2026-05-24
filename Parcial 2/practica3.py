@@ -12,7 +12,7 @@ img = cv2.resize(img, (600, 400))
 copy = img.copy()
 copy = cv2.cvtColor(copy, cv2.COLOR_BGR2GRAY)
 copy = cv2.GaussianBlur(copy, (7, 7), 0)
-_, valor = cv2.threshold(copy, 240, 255, cv2.THRESH_BINARY)
+_, valor = cv2.threshold(copy, 70, 90, cv2.THRESH_BINARY)
 kernel = np.ones((5, 3), np.uint8)
 figura = cv2.morphologyEx(valor, cv2.MORPH_CLOSE, kernel)
 bordes = cv2.Canny(figura, 3, 3)
@@ -28,7 +28,7 @@ lista = []
 
 for i in range(len(contornos)):
     area = cv2.contourArea(contornos[i])
-    if area > 1000:
+    if area > 700:
         lista.append(area)
         M = cv2.moments(contornos[i])
         if M["m00"] != 0:
